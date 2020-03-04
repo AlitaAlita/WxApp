@@ -1,0 +1,17 @@
+<view class="card">
+    <text class="title">{{title}}</text>
+    <view class="content-area">
+        <view class="left-area">
+            <text class="description">{{description}}</text>
+            <view class="info-area">
+                <text class="nickname">123</text>
+                <text class="posted-date">{{createTime}}</text>
+                <text class="views">{{views}}</text>
+                
+            </view>
+        </view>
+        <view class="right-area">
+            <image src='{{firstPicture}}' class="thumbnail" mode="aspectFill"/>
+        </view>
+    </view>
+</view>
