@@ -1,11 +1,11 @@
-//app.js
+  //app.js
 App({
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
+ // 包含小程序公共 JS 代码，相当于整个项目的入口文件，在这里可以启动小程序首页，做全局登录操作，以及其它公共事务等；
     // 登录
     wx.login({
       success: res => {

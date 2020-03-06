@@ -1,4 +1,4 @@
-/**app.wxss**/
+/**app.wxss小程序全局样式代码，在小程序中，没有 HTML 和 CSS 文件，而是通过 WXML 和 WXSS 文件来实现类似的功能，因为微信为小程序定制了一些特有的组件标签和样式语法，原生的 HTML 和 CSS 语法无法实现；**/
 .container {
   height: 100%;
   display: flex;
