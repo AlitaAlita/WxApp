@@ -3,7 +3,7 @@
   <view class="cards-area">
         <view wx:for="{{articles}}">
             <view bindtap="tap('{{item.id}}')" wx:if="{{item.id}}">
-              <card title="{{item.title}}" description="{{item.description}}" nickname="{{item.nickname}}" createTime="{{item.createTime}}" views="{{item.views}}" firstPicture="{{item.firstPicture}}"/>
+              <card title="{{item.title}}" description="{{item.description}}" nickname="{{item.user.nickname}}" createTime="{{item.createTime}}" views="{{item.views}}" firstPicture="{{item.firstPicture}}"/>
             </view>
         </view>
     </view>
