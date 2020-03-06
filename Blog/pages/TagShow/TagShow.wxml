@@ -1,0 +1,33 @@
+<!-- <view class='base-padding'>
+ <view class='panel'>
+    <view class='row'>
+     <view wx:for="{{articles}}">
+      <view class='row'>
+        <view class='col-4'>
+          <image class='img-responsive' mode='center' src='/images/cate-be-java.png'></image>
+        </view>
+        <view class='col-8'>
+          <view class='ellipsis-1row'>{{item.name}}</view>
+          <view class='text-muted'> 共 {{item.count}}篇</view>
+        </view>
+      </view>
+     </view>
+    </view>
+  </view>
+</view> -->
+<view class="item">
+<view wx:for="{{articles}}">
+    <view class="content-area">
+        <view class="left-area">
+            <text class="description">{{item.name}}</text>
+            <view class="info-area">
+                <text class="count">共{{item.count}}篇</text>
+            </view>
+        </view>
+        <view class="right-area">
+            <image src='/images/cate-be-java.png' class="thumbnail" mode="aspectFill"/>
+        </view>
+    </view>
+    </view>
+    
+</view>
