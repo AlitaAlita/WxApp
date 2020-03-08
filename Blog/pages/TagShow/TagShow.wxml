@@ -21,7 +21,7 @@
         <view class="left-area">
             <text class="description">{{item.name}}</text>
             <view class="info-area">
-                <text class="count">共{{item.count}}篇</text>
+                <text class="count">共 {{item.count}} 篇</text>
             </view>
         </view>
         <view class="right-area">
