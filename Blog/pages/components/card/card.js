@@ -6,7 +6,7 @@ Component({
     title: String,
     description: String,
     nickname:String,
-    createTime: String,
+    updateTime: String,
     views: Number,
     firstPicture: String
   },

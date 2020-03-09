@@ -1,3 +1,4 @@
+@import "../components/wxParse/wxParse.wxss";
 /* pages/detail/detail.wxss */
 @font-face {
   font-family: "iconfont";
@@ -35,10 +36,10 @@
   margin-right: 10rpx; 
 }
 
-.meta-header .posted-date {
+.meta-header .updateTime {
   margin-left: 30rpx; 
 }
-.meta-header .posted-date:before {
+.meta-header .updateTime:before {
   content: '\e64e';
   margin-right: 10rpx; 
 }
@@ -108,4 +109,11 @@
   margin-top: 20px;
   margin-bottom: 10px;
   clear: both;
+}
+/* Wxparse样式自定义 */
+.content .wxParse-p {
+  margin: 0 0 15rpx; 
+  outline: 1;
+  padding: 0;
+  vertical-align: baseline;
 }

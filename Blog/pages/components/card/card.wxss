@@ -58,7 +58,7 @@
   margin-right: 30rpx;
 }
 .card .content-area .left-area .info-area .nickname:before {
-  content: '\e666';
+  content: '\e688';
   margin-right: 10rpx;
 }
 .card .content-area .left-area .info-area .views {

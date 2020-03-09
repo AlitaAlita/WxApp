@@ -5,78 +5,49 @@ Page({
  * 页面的初始数据
  */
   data: {
-    article: {
-      id: 1,
-      title: '测试文章标题',
-      author: '学院君',
-      post_date: '2019-01-10',
-      content: [
-        {
-          name: 'p',
-          attrs: {
-            class: 'p_class'
-          },
-          children: [{
-            type: 'node',
-            name: 'img',
-            attrs: {
-              class: 'img_class',
-              src: 'https://statics.laravelacademy.org/wp-content/uploads/2015/07/Laravel学院Logo.png'
-            }
-          }]
-        },
-        {
-          name: 'h3',
-          attrs: {
-            class: 'h3_class',
-          },
-          children: [{
-            type: 'text',
-            text: '愿景'
-          }]
-        },
-        {
-          name: 'p',
-          attrs: {
-            class: 'p_class'
-          },
-          children: [{
-            type: 'text',
-            text: 'Laravel框架是一个为Web工匠准备的PHP框架，让你从意大利面条一样杂乱的代码中解放出来，从而快速构建简洁、优雅、功能强大的web应用。'
-          }]
-        },
-        {
-          name: 'p',
-          attrs: {
-            class: 'p_class'
-          },
-          children: [{
-            type: 'text',
-            text: 'Laravel学院致力于提供优质的Laravel中文学习资源，帮助你快速上手，从入门到精通，让这个世界上最流行的PHP框架在中国拥有更多拥趸。'
-          }]
-        },
-        {
-          name: 'p',
-          attrs: {
-            class: 'p_class'
-          },
-          children: [{
-            type: 'text',
-            text: '这是一个纯粹的关于学习与分享、知识与技能的平台，学院君抛个砖，希望大家相互帮助，共同进步，让学习与进取者不再孤单。'
-          }]
-        }
-      ],
-      views: 1000,
-      votes: 100
-    },
+    article:{},
     info: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function (options = {}) {
+    this.data.article.id = options.id
+    console.log(this.data.article.id)
+    this.loadArticle()
+  },
 
+  loadArticle: function () {
+    var that = this
+    wx.showLoading({
+      title: '加载中'
+    })
+    wx.request({
+      url: `http://localhost:8080/api/blog/${that.data.article.id}`,
+      success: (res) => {
+        that.setData({
+          article: {
+            title: res.data.result.title,
+            firstPicture: res.data.result.firstPicture,
+            author: res.data.result.user.nickname,
+            content: res.data.result.content,
+            updateTime: res.data.result.updateTime,
+            views: res.data.result.views,
+            
+          }
+        })
+        // 引入 wxParse 组件处理文章正文
+        var wxParse = require('../components/wxParse/wxParse.js')
+        wxParse.wxParse('article_content', 'md', that.data.article.content, that, 0)
+      },
+      fail: function () {
+        that.data.info = '获取文章详情数据失败'
+      },
+      complete: function () {
+        wx.hideLoading()
+      }
+    })
   },
 
   /**
@@ -125,6 +96,11 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    let id = this.data.article.id
+    let title = this.data.article.title
+    return {
+      title: `Blog - ${title}`,
+      path: `/pages/detail/detail?id=${id}`
+    }
   }
 })

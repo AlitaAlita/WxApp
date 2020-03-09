@@ -5,7 +5,7 @@
             <text class="description">{{description}}</text>
             <view class="info-area">
                 <text class="nickname">{{nickname}}</text>
-                <text class="posted-date">{{createTime}}</text>
+                <text class="posted-date">{{updateTime}}</text>
                 <text class="views">{{views}}</text>
                 
             </view>
