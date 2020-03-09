@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/TagShow/TagShow"
+    "pages/TagShow/TagShow",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

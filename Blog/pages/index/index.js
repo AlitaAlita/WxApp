@@ -47,6 +47,11 @@ Page({
     })
     this.loadArticles()
   },
+  postDetail: function (event) {
+    wx.navigateTo({
+      url: '/pages/detail/detail?id=' + event.currentTarget.dataset.id,
+    })
+  },
   onReachBottom: function () {
     this.data.currentPage++
     if (this.data.isLoadingMore && this.data.currentPage > 20) {
