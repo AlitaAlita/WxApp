@@ -1,0 +1,34 @@
+<i-notice-bar icon="systemprompt" loop>
+  这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...
+</i-notice-bar>
+<view class='base-padding row user-photo'>
+  <view class='user'>
+      <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view class='username'>{{userInfo.nickName}}</view>
+    <view class='color-grey font-lv3'>为api生,为框架死，为debug奋斗一辈子。</view>
+  </view>
+</view>
+
+
+
+<view class='base-padding row base-info'>
+  <navigator url='/pages/about/about' class='col-12'>
+    <image src='/images/about-us.png'></image> 关于我们 
+    <image class='pull-right' src='/images/right-angle.png'></image>
+  </navigator>
+  
+</view>
+<i-toast id="toast" />
+<!-- 授权弹窗 -->
+<button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="auth"  hidden="{{hiddenName}}">点击授权</button>
+
+<canvas  canvas-id="canvas"  class="canvas" style="position:absolute;width:{{canvasWidth}};height:{{canvasHeight}};left:{{canvasLeft}};">
+</canvas>
+
+<!-- 弹框 -->
+<view class='tankuang2' wx:if="{{showhaibao}}">
+    <view class='container1'>
+          <image style="width:100%;height:90%"  src="{{imagePath}}" bindtap="previewImg" class='haibao'></image>        
+    </view>
+     <button class='savelocalImg'  bindtap="savelocalImg">保存图片</button>
+</view>

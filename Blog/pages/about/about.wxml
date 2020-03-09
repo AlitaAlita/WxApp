@@ -1,0 +1,29 @@
+<view class='base-padding font-lv3 color-semi content'>
+  <view><text class='color-black'>Blog</text> 是由 <text class='color-black'>3人</text> 合作开发的一款简单的个人博客小程序。前后端都已开源</view>
+  <view class='strong'>相关开源代码请关注</view>
+  <view>
+      <view>GitHub: https://github.com/AlitaAlita</view>
+      <image src='https://picsum.photos/800/450'></image>
+  </view>
+
+  <!-- <view class='strong'>操作简单的Mongodb网页web管理工具</view>
+  <view>
+      <view>Gitee: https://gitee.com/qinxuewu/mongo-web-select</view>
+      <image src='http://www.qinxuewu.club/upload/2018/11/153553_91a7ba66_14783712018122518231917.png'></image>
+  </view>
+  <view class='strong'>基于Spring Boot监控远程服务器多个Java应用JVM性能图形化工具</view>
+  <view>
+      <view>Gitee: https://gitee.com/qinxuewu/boot-actuator</view>
+      <image src='http://www.qinxuewu.club/upload/2018/11/145529_67e555da_14783712018122518242871.png'></image>
+      <image src='http://www.qinxuewu.club/upload/2018/11/163003_4852ee05_147837120181225182428802.png'></image>
+      <image src='http://www.qinxuewu.club/upload/2018/11/124822_14bd50ee_147837120181225182428483.png'></image>
+  </view> -->
+
+  <view class='strong'>联系方式</view>
+  <view>
+      <view>QQ: 3254197655</view>
+      <view>QQ群: Alita</view>
+      <view>邮箱: Alita@QQ.COM</view>
+  </view>
+
+</view>

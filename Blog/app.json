@@ -3,13 +3,15 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/TagShow/TagShow",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/userinfo/userinfo",
+    "pages/about/about"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000000",
     "navigationBarTitleText": "Blog",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
     "tabBar": {
       "color": "#7A7E83",
@@ -30,7 +32,7 @@
           "text": "分类"
         },
         {
-          "pagePath": "pages/logs/logs",
+          "pagePath": "pages/userinfo/userinfo",
           "iconPath": "images/user.png",
           "selectedIconPath": "images/user-select.png",
           "text": "我的"
