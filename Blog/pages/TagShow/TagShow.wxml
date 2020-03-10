@@ -17,6 +17,7 @@
 </view> -->
 <view class="item">
 <view wx:for="{{articles}}">
+<view data-id="{{item.id}}" bindtap="postDetail" wx:if="{{item.id}}">
     <view class="content-area">
         <view class="left-area">
             <text class="description">{{item.name}}</text>
@@ -27,6 +28,7 @@
         <view class="right-area">
             <image src='/images/cate-be-java.png' class="thumbnail" mode="aspectFill"/>
         </view>
+    </view>
     </view>
     </view>
     

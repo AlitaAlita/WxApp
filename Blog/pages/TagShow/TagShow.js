@@ -70,5 +70,10 @@ Page({
       title: '文章加载中...'
     })
     this.loadArticles()
-  }
+  },
+  postDetail: function (event) {
+    wx.navigateTo({
+      url: '/pages/Tape/Tape?id=' + event.currentTarget.dataset.id,
+    })
+  },
 })
