@@ -5,7 +5,7 @@
             <!-- 搜索框 -->
                 <view class="weui-search-bar__box">
                     <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-                    <input type="text" class="weui-search-bar__input" name="query"  bindinput="getQuery" placeholder="请输入搜索内容"/>
+                    <input type="text" class="weui-search-bar__input" name="query"  bindinput="getQuery" placeholder="请输入搜索内容" value="{{query}}"/>
                 </view>
             </view>
             <!-- 搜索按钮,调用搜索查询方法 -->
@@ -17,6 +17,6 @@
               <card title="{{item.title}}" description="{{item.description}}" nickname="{{item.user.nickname}}" updateTime="{{item.updateTime}}" views="{{item.views}}" firstPicture="{{item.firstPicture}}"/>
             </view>
         </view>
-    </view>
+  </view>
     <text class="info" wx:if="{{info}}">{{info}}</text>
 </view>

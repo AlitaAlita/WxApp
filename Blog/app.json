@@ -6,7 +6,8 @@
     "pages/detail/detail",
     "pages/userinfo/userinfo",
     "pages/about/about",
-    "pages/Tape/Tape"
+    "pages/search/search",
+    "pages/WxComment/WxComment"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -37,7 +38,13 @@
         "iconPath": "images/user.png",
         "selectedIconPath": "images/user-select.png",
         "text": "我的"
-      }
+      },
+            {
+              "pagePath": "pages/WxComment/WxComment",
+              "iconPath": "images/user.png",
+              "selectedIconPath": "images/user-select.png",
+              "text": "我的"
+            }
     ]
   },
   "style": "v2",

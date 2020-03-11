@@ -7,7 +7,8 @@ Page({
    articles:[],
    isLoadingMore:false,
    currentPage:0,
-   info:''
+   info:'',
+   query:''
   },
   //事件处理函数
   bindViewTap: function() {
@@ -63,6 +64,17 @@ Page({
     this.data.isLoadingMore = true
     this.loadArticles()
   },
-  
+  getQuery:function(e){
+    this.setData({
+      query: e.detail.value
+    })
+  },
+  search:function(){
+    console.log("跳转到搜索页面")
+    wx.navigateTo({
+      url: '/pages/search/search?query='+this.data.query,
+    })
+    
+  }
   
 })
