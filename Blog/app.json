@@ -14,6 +14,12 @@
     "navigationBarTitleText": "Blog",
     "navigationBarTextStyle": "white"
   },
+  "plugins": {
+    "htmltowxml": {
+      "version": "1.4.0",
+      "provider": "wxa51b9c855ae38f3c"
+    }
+  },
   "tabBar": {
     "color": "#7A7E83",
     "selectedColor": "#3cc51f",
