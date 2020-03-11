@@ -1,4 +1,4 @@
-/**index.wxss**/
+/* pages/search/search.wxss */
 .container {
   background-color: #eee; 
   padding: 0rpx 0;
