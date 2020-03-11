@@ -40,7 +40,7 @@
 }
 /* 搜索框样式 */
 .weui-search-bar {
-  position: fixed;
+  position: relative;
   width: 100%;
   padding: 8rpx 10rpx; 
   display: -webkit-box;
