@@ -23,7 +23,7 @@ Page({
   loadArticles: function (){
     var that = this
     wx.request({
-      url: `http://localhost:8080/api/types/${that.data.articles.id}`,
+      url: `http://alita.网址/api/types/${that.data.articles.id}`,
       success: (res) => {
         if (res.data.msg === 'success') {
           if (res.data.result.content.length == 0) {

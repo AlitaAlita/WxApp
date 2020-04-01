@@ -48,7 +48,7 @@ Page({
   loadArticles: function () {
     var that = this
     wx.request({
-      url: "http://localhost:8080/api/types",
+      url: "http://alita.网址/api/types",
       success: (res) => {
         if (res.data.msg === 'success') {
           console.log(res.data.result.content)

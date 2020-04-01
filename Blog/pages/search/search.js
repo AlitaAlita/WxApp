@@ -26,7 +26,7 @@ Page({
   }
   console.log(that.data.query)
     wx.request({
-      url: 'http://localhost:8080/api/search',
+      url: 'http://alita.网址/api/search',
       method:"POST",
       data: { query: that.data.query },
       header: { "Content-Type": "application/x-www-form-urlencoded"},

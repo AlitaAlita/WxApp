@@ -19,7 +19,7 @@ Page({
   loadArticles: function (){
     var that = this
     wx.request({
-      url: 'http://localhost:8080/api/blogs?page='+that.data.currentPage,
+      url: 'http://alita.网址/api/blogs?page='+that.data.currentPage,
       success: (res) => {
         if (res.data.msg === 'success') {
           if (res.data.result.content.length==0){

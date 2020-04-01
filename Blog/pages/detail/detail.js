@@ -24,7 +24,7 @@ Page({
       title: '加载中'
     })
     wx.request({
-      url: `http://localhost:8080/api/blog/${that.data.article.id}`,
+      url: `http://alita.网址/api/blog/${that.data.article.id}`,
       success: (res) => {
         that.setData({
           article: {
@@ -37,9 +37,7 @@ Page({
             
           }
         })
-        // 引入 wxParse 组件处理文章正文
-        var wxParse = require('../components/wxParse/wxParse.js')
-        wxParse.wxParse('article_content', 'md', that.data.article.content, that, 0)
+      
       },
       fail: function () {
         that.data.info = '获取文章详情数据失败'

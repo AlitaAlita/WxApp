@@ -6,14 +6,19 @@
     "pages/detail/detail",
     "pages/userinfo/userinfo",
     "pages/about/about",
-    "pages/search/search",
-    "pages/WxComment/WxComment"
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#000000",
     "navigationBarTitleText": "Blog",
     "navigationBarTextStyle": "white"
+  },
+  "plugins": {
+    "htmltowxml": {
+      "version": "1.4.0",
+      "provider": "wxa51b9c855ae38f3c"
+    }
   },
   "tabBar": {
     "color": "#7A7E83",
@@ -38,13 +43,8 @@
         "iconPath": "images/user.png",
         "selectedIconPath": "images/user-select.png",
         "text": "我的"
-      },
-            {
-              "pagePath": "pages/WxComment/WxComment",
-              "iconPath": "images/user.png",
-              "selectedIconPath": "images/user-select.png",
-              "text": "我的"
-            }
+      }
+
     ]
   },
   "style": "v2",
